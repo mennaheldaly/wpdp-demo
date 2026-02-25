@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Player Stage - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="index.html" class="back-link">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="assessment-container">
+                <!-- Header Section -->
+                <section class="assessment-header">
+                    <h1 class="assessment-title">FIND A PLAYER STAGE</h1>
+                    <p class="assessment-subtitle">Answer a few quick questions to identify the most accurate WPDP stage for your player.</p>
+                </section>
+
+                <!-- Questions Area -->
+                <section class="questions-section">
+                    <!-- Question 0: Age -->
+                    <div class="question-card" data-question="0">
+                        <h2 class="question-title">Age</h2>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="under-6">Under 6</button>
+                            <button class="option-btn" data-value="6-8">6–8</button>
+                            <button class="option-btn" data-value="9-10">9–10</button>
+                            <button class="option-btn" data-value="11-13">11–13</button>
+                            <button class="option-btn" data-value="14-16">14–16</button>
+                            <button class="option-btn" data-value="17+">17+</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 1: Rally Ability -->
+                    <div class="question-card" data-question="1">
+                        <h2 class="question-title">Rally Ability</h2>
+                        <p class="question-subtext">Red, orange, or regular ball.</p>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="0-2">0–2</button>
+                            <button class="option-btn" data-value="3-6">3–6</button>
+                            <button class="option-btn" data-value="7-12">7–12</button>
+                            <button class="option-btn" data-value="13-20">13–20</button>
+                            <button class="option-btn" data-value="20+">20+</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Contact Quality -->
+                    <div class="question-card" data-question="2">
+                        <h2 class="question-title">Contact Quality</h2>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="rarely-clean">Rarely clean</button>
+                            <button class="option-btn" data-value="sometimes-clean">Sometimes clean</button>
+                            <button class="option-btn" data-value="mostly-clean">Mostly clean in controlled rallies</button>
+                            <button class="option-btn" data-value="consistent">Consistent in point play</button>
+                            <button class="option-btn" data-value="under-pressure">Clean under pressure</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 3: Serve Ability -->
+                    <div class="question-card" data-question="3">
+                        <h2 class="question-title">Serve Ability</h2>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="underhand">Underhand only</button>
+                            <button class="option-btn" data-value="basic-overhand">Basic overhand attempts</button>
+                            <button class="option-btn" data-value="can-start">Can start points with overhand serve</button>
+                            <button class="option-btn" data-value="can-vary">Can vary placement/speed</button>
+                            <button class="option-btn" data-value="tactical">Uses serve tactically</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 4: Movement & Footwork -->
+                    <div class="question-card" data-question="4">
+                        <h2 class="question-title">Movement & Footwork</h2>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="basic-stiff">Basic/stiff</button>
+                            <button class="option-btn" data-value="early-patterns">Early patterns</button>
+                            <button class="option-btn" data-value="recovers">Recovers reliably</button>
+                            <button class="option-btn" data-value="efficient">Efficient directional movement</button>
+                            <button class="option-btn" data-value="athletic">Athletic/explosive/tactical</button>
+                        </div>
+                    </div>
+
+                    <!-- Question 5: Tactical Awareness -->
+                    <div class="question-card" data-question="5">
+                        <h2 class="question-title">Tactical Awareness</h2>
+                        <div class="question-options">
+                            <button class="option-btn" data-value="none">None</button>
+                            <button class="option-btn" data-value="simple-aiming">Simple aiming</button>
+                            <button class="option-btn" data-value="basic-patterns">Basic rally patterns</button>
+                            <button class="option-btn" data-value="intentional">Intentional play</button>
+                            <button class="option-btn" data-value="full-planning">Full tactical planning</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Result Card (hidden initially) -->
+                <section class="result-section" id="resultSection" style="display: none;">
+                    <div class="result-card">
+                        <h2 class="result-title">SUGGESTED WPDP STAGE</h2>
+                        <div class="result-content">
+                            <h3 class="result-stage" id="resultStage">STAGE 1: ACTIVE START</h3>
+                            <p class="result-description">Based on your answers, this player most closely matches this stage.</p>
+                        </div>
+                        <div class="result-buttons">
+                            <button class="result-btn primary" id="viewResourcesBtn">VIEW COACHING RESOURCES FOR THIS STAGE</button>
+                            <button class="result-btn secondary" id="reviewAnswersBtn">REVIEW ANSWERS</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="assessment.js"></script>
+</body>
+</html>
+

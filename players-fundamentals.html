@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals — Players - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="players.html" class="back-link">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="players-stage-container">
+                <!-- Header Section -->
+                <section class="players-stage-header">
+                    <h1 class="players-stage-title">FUNDAMENTALS — PLAYERS</h1>
+                </section>
+
+                <!-- Week Cluster Bar Section -->
+                <section class="players-week-cluster-section">
+                    <h2 class="players-section-title">Week Progress</h2>
+                    <div class="players-week-cluster-bar" id="weekClusterBar">
+                        <!-- Week timeline and player dots will be rendered here -->
+                    </div>
+                </section>
+
+                <!-- Players List Section -->
+                <section class="players-list-section">
+                    <h2 class="players-section-title">Players List</h2>
+                    <div class="players-table-container">
+                        <table class="players-table" id="playersTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Week</th>
+                                    <th>Status</th>
+                                    <th>Needs focus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Player rows will be rendered here by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="players-overview-mock.js"></script>
+    <script src="players-fundamentals.js"></script>
+</body>
+</html>

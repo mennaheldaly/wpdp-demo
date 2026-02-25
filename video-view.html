@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building the Forehand Swing Path - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="#" class="back-link" id="backLink">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="video-view-container">
+                <!-- Header Section -->
+                <section class="video-view-header">
+                    <div class="video-title-wrapper">
+                        <h1 class="video-view-title" id="videoTitle">BUILDING THE FOREHAND SWING PATH (A–B PATTERN)</h1>
+                        <div class="video-tag-pill" id="videoTag">FH</div>
+                    </div>
+                </section>
+
+                <!-- Video Player -->
+                <section class="video-player-section">
+                    <div class="video-player-wrapper">
+                        <video class="video-player" controls>
+                            <source src="videos/building-forehand-swing-path.m4v" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </section>
+
+                <!-- Summary Text -->
+                <section class="video-summary-section">
+                    <p class="video-summary-text" id="videoSummary">
+                        This progression teaches players to move the racquet from the starting position (A) to a clean, high finish (B), helping them understand a smooth and repeatable forehand swing path.
+                    </p>
+                </section>
+
+                <!-- Checklist Section -->
+                <section class="checklist-section">
+                    <h2 class="checklist-heading">CHECKLIST</h2>
+                    <div class="checklist-container" id="checklistContainer">
+                        <!-- Rendered by JavaScript -->
+                    </div>
+
+                    <button class="done-button" id="doneButton">DONE</button>
+
+                    <!-- Fix Video Recommendation Card (shown when not all checked) -->
+                    <div class="fix-video-card" id="fixVideoCard" style="display: none;">
+                        <div class="fix-video-thumbnail" style="background-image: url('video-thumbnail-1.jpg');">
+                            <div class="fix-video-overlay"></div>
+                        </div>
+                        <div class="fix-video-content">
+                            <div class="fix-video-text-box">
+                                <h3 class="fix-video-label">RECOMMENDED FIX VIDEO</h3>
+                                <h4 class="fix-video-title" id="fixVideoTitle">Fixing the Push/Chopped Forehand</h4>
+                            </div>
+                            <div class="fix-video-tag" id="fixVideoTag">FH • FIX</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="videos-mock.js"></script>
+    <script src="video-view.js"></script>
+</body>
+</html>
+

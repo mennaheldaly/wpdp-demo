@@ -1,0 +1,59 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="top-arc" d="M 12 20 A 18 8 0 0 1 48 20"/>
+    <path id="bottom-arc" d="M 12 40 A 18 8 0 0 0 48 40"/>
+  </defs>
+  
+  <!-- Outer white border -->
+  <circle cx="30" cy="30" r="30" fill="white"/>
+  
+  <!-- Dark red outer band -->
+  <circle cx="30" cy="30" r="28" fill="#8B0000"/>
+  
+  <!-- Inner white border -->
+  <circle cx="30" cy="30" r="24" fill="white"/>
+  
+  <!-- Dark red center background -->
+  <circle cx="30" cy="30" r="22" fill="#8B0000"/>
+  
+  <!-- Top text: TENNIS (curved along top) -->
+  <text fill="white" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" letter-spacing="0.5">
+    <textPath href="#top-arc" startOffset="50%" text-anchor="middle">TENNIS</textPath>
+  </text>
+  
+  <!-- Bottom text: CANADA (curved along bottom) -->
+  <text fill="white" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" letter-spacing="0.5">
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">CANADA</textPath>
+  </text>
+  
+  <!-- Bright red maple leaf (simplified shape) -->
+  <path d="M 30 18 
+           L 33 21 L 35 20 L 34 23 L 37 23 L 35 25 L 38 27 L 35 28 L 36 31 
+           L 32 30 L 30 33 
+           L 28 30 L 24 31 L 25 28 L 22 27 L 25 25 L 23 23 L 26 23 L 25 20 L 27 21 Z" 
+        fill="#DC143C" stroke="#DC143C" stroke-width="0.3"/>
+  
+  <!-- White tennis racket overlay -->
+  <g transform="translate(30, 25)">
+    <!-- Racket head (oval) -->
+    <ellipse cx="0" cy="0" rx="7" ry="8" fill="none" stroke="white" stroke-width="1.5"/>
+    
+    <!-- Racket strings (vertical) -->
+    <line x1="-5" y1="-7" x2="-5" y2="7" stroke="white" stroke-width="0.8"/>
+    <line x1="-2.5" y1="-7" x2="-2.5" y2="7" stroke="white" stroke-width="0.8"/>
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="white" stroke-width="0.8"/>
+    <line x1="2.5" y1="-7" x2="2.5" y2="7" stroke="white" stroke-width="0.8"/>
+    <line x1="5" y1="-7" x2="5" y2="7" stroke="white" stroke-width="0.8"/>
+    
+    <!-- Racket strings (horizontal) -->
+    <line x1="-6" y1="-4" x2="6" y2="-4" stroke="white" stroke-width="0.8"/>
+    <line x1="-6" y1="-1.5" x2="6" y2="-1.5" stroke="white" stroke-width="0.8"/>
+    <line x1="-6" y1="1" x2="6" y2="1" stroke="white" stroke-width="0.8"/>
+    <line x1="-6" y1="3.5" x2="6" y2="3.5" stroke="white" stroke-width="0.8"/>
+    <line x1="-6" y1="6" x2="6" y2="6" stroke="white" stroke-width="0.8"/>
+    
+    <!-- Racket handle -->
+    <rect x="-2" y="8" width="4" height="5" fill="white" rx="1"/>
+  </g>
+</svg>
+

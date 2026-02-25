@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2 — Contact Point Consistency - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="fundamentals-annual-week-3.html" class="back-link">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="lesson-plan-container">
+                <!-- Header Section -->
+                <section class="lesson-plan-header">
+                    <div class="lesson-plan-header-left">
+                        <div class="session-label" id="sessionLabel">Session 2 • 60 min</div>
+                        <h1 class="lesson-plan-title" id="lessonPlanTitle">Contact Point Consistency</h1>
+                        <div class="lesson-plan-breadcrumb" id="lessonPlanBreadcrumb">
+                            <a href="fundamentals.html">Fundamentals</a>
+                            <span class="lesson-plan-breadcrumb-separator">></span>
+                            <a href="fundamentals-annual.html">Block 1</a>
+                            <span class="lesson-plan-breadcrumb-separator">></span>
+                            <a href="fundamentals-annual-week-3.html">Week 3</a>
+                            <span class="lesson-plan-breadcrumb-separator">></span>
+                            <span>Session 2</span>
+                        </div>
+                        <div class="lesson-plan-chips" id="lessonPlanChips">
+                            <span class="lesson-plan-chip">Stage: Fundamentals</span>
+                            <span class="lesson-plan-chip">Block: Block 1 • Weeks 1–12</span>
+                            <span class="lesson-plan-chip">Week: Week 3</span>
+                        </div>
+                    </div>
+                    <div class="lesson-plan-header-right">
+                        <div class="lesson-plan-mode-toggle">
+                            <button class="mode-btn" id="prepModeBtn" data-mode="prep">Preparation Mode</button>
+                            <button class="mode-btn" id="lessonModeBtn" data-mode="lesson">Lesson Mode</button>
+                        </div>
+                        <button class="lesson-plan-action-btn" id="printExportBtn">Print / Export</button>
+                        <button class="lesson-plan-action-btn secondary" id="saveBtn">Save</button>
+                    </div>
+                </section>
+
+                <!-- Session Flow Summary -->
+                <section class="session-flow-section" id="sessionFlowSection">
+                    <!-- Rendered by JavaScript -->
+                </section>
+
+                <!-- Players Strip Section -->
+                <section class="players-strip-section">
+                    <h2 class="players-strip-title">Players in this session</h2>
+                    <div class="players-strip-container" id="playersStripContainer">
+                        <!-- Player chips will be rendered here by JavaScript -->
+                    </div>
+                    <button class="add-player-btn" id="addPlayerBtn">+ Add Player</button>
+                </section>
+
+                <!-- Main Content -->
+                <section class="lesson-plan-content" id="lessonPlanContent">
+                    <!-- Rendered by JavaScript based on mode -->
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Player Progress Drawer -->
+    <div class="player-drawer-overlay" id="playerDrawerOverlay" style="display: none;">
+        <div class="player-drawer" id="playerDrawer">
+            <div class="player-drawer-header">
+                <h2 class="player-drawer-title" id="playerDrawerTitle">Player Name</h2>
+                <button class="player-drawer-close" id="playerDrawerClose">&times;</button>
+            </div>
+            <div class="player-drawer-content" id="playerDrawerContent">
+                <!-- Player info and form will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Drill Video Modal -->
+    <div class="drill-video-modal" id="drillVideoModal" style="display: none;">
+        <div class="drill-video-modal-overlay"></div>
+        <div class="drill-video-modal-content">
+            <button class="drill-video-modal-close" id="drillVideoModalClose">&times;</button>
+            <h2 class="drill-video-modal-title" id="drillVideoModalTitle"></h2>
+            <p class="drill-video-modal-description">Demonstration of correct execution and coaching flow for this drill.</p>
+            <div class="drill-video-modal-player-wrapper">
+                <video class="drill-video-modal-player" id="drillVideoModalPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Video Modal -->
+    <div class="preview-video-modal" id="previewVideoModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="previewVideoModalTitle">
+        <div class="preview-video-modal-overlay" id="previewVideoModalOverlay"></div>
+        <div class="preview-video-modal-content">
+            <button class="preview-video-modal-close" id="previewVideoModalClose" aria-label="Close modal">&times;</button>
+            <div class="preview-video-modal-header">
+                <h2 class="preview-video-modal-title" id="previewVideoModalTitle"></h2>
+                <span class="preview-only-badge">Preview Only</span>
+            </div>
+            <p class="preview-video-modal-description">Video preview is disabled in this demo.</p>
+            <div class="preview-video-modal-placeholder">
+                <div class="preview-video-placeholder-content">
+                    <div class="preview-video-placeholder-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" fill="rgba(225, 6, 0, 0.1)"/>
+                            <path d="M10 8L16 12L10 16V8Z" fill="#E10600" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Print/Export Modal -->
+    <div class="print-modal" id="printModal" style="display: none;">
+        <div class="print-modal-wrapper">
+            <div class="print-modal-header">
+                <h2 class="print-modal-title">Print Preview</h2>
+                <button class="print-modal-close" id="printModalClose">&times;</button>
+            </div>
+            <div class="print-modal-body" id="printModalBody">
+                <div class="paper-stage" id="paperStage">
+                    <div class="print-paper" id="printPaper">
+                        <div class="print-paper-content" id="printPaperContent">
+                            <!-- Lesson Mode preview rendered here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="print-modal-footer">
+                <button class="print-modal-btn secondary" id="printModalCloseBtn">Close</button>
+                <button class="print-modal-btn" id="printModalDownloadBtn">Download PDF</button>
+                <button class="print-modal-btn" id="printModalPrintBtn">Print</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="annual-plan-fundamentals.js"></script>
+    <script src="videos-mock.js"></script>
+    <script src="players-mock.js"></script>
+    <script src="fundamentals-annual-week-3-session-2.js"></script>
+</body>
+</html>

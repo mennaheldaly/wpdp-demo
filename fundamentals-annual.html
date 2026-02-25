@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals — Annual Plan - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="fundamentals.html" class="back-link">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="annual-plan-container">
+                <!-- Header Section -->
+                <section class="annual-plan-header">
+                    <div class="annual-plan-header-top">
+                        <div class="annual-plan-header-left">
+                            <h1 class="annual-plan-title">FUNDAMENTALS — ANNUAL PLAN</h1>
+                            <p class="annual-plan-subtitle">A structured year-long plan coaches can prepare from and deliver on court.</p>
+                        </div>
+                        <div class="annual-plan-header-right">
+                            <div class="annual-plan-controls">
+                                <div class="annual-plan-date-picker-container">
+                                    <label for="blockStartDate" class="annual-plan-date-label">Block Start Date:</label>
+                                    <input type="date" id="blockStartDate" class="annual-plan-date-input" value="">
+                                </div>
+                                <div class="annual-plan-view-toggle">
+                                    <button class="view-toggle-btn active" data-view="grid">Grid View</button>
+                                    <button class="view-toggle-btn" data-view="calendar">Calendar View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Blocks Section (Grid View) -->
+                <section class="blocks-section" id="blocksSection">
+                    <!-- Blocks will be rendered here by JavaScript -->
+                </section>
+
+                <!-- Calendar Section (Calendar View) -->
+                <section class="calendar-section" id="calendarSection" style="display: none;">
+                    <div class="calendar-container">
+                        <!-- Calendar Filters -->
+                        <div class="calendar-filters">
+                            <div class="calendar-filter-group">
+                                <button class="calendar-filter-btn" id="filterStageBtn">
+                                    <span id="filterStageText">All Stages</span>
+                                    <span class="filter-arrow">▼</span>
+                                </button>
+                                <div class="calendar-filter-dropdown" id="filterStageDropdown" style="display: none;">
+                                    <div class="filter-option" data-value="all">All Stages</div>
+                                    <div class="filter-option" data-value="fundamentals">Fundamentals</div>
+                                    <div class="filter-option" data-value="stage3">Stage 3</div>
+                                    <div class="filter-option" data-value="stage4">Stage 4</div>
+                                </div>
+                            </div>
+                            <div class="calendar-filter-group">
+                                <button class="calendar-filter-btn" id="filterGroupBtn">
+                                    <span id="filterGroupText">All Groups</span>
+                                    <span class="filter-arrow">▼</span>
+                                </button>
+                                <div class="calendar-filter-dropdown" id="filterGroupDropdown" style="display: none;">
+                                    <div class="filter-option" data-value="all">All Groups</div>
+                                    <div class="filter-option" data-value="Monday 5pm Group">Monday 5pm Group</div>
+                                    <div class="filter-option" data-value="Wednesday 5pm Group">Wednesday 5pm Group</div>
+                                </div>
+                            </div>
+                            <div class="calendar-filter-group">
+                                <button class="calendar-filter-btn" id="filterPlayerBtn">
+                                    <span id="filterPlayerText">All Players</span>
+                                    <span class="filter-arrow">▼</span>
+                                </button>
+                                <div class="calendar-filter-dropdown" id="filterPlayerDropdown" style="display: none;">
+                                    <div class="filter-option" data-value="all">All Players</div>
+                                    <div class="filter-option" data-value="Emma">Emma</div>
+                                    <div class="filter-option" data-value="Lucas">Lucas</div>
+                                    <div class="filter-option" data-value="Noah">Noah</div>
+                                    <div class="filter-option" data-value="Sofia">Sofia</div>
+                                    <div class="filter-option" data-value="Liam">Liam</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calendar-header">
+                            <button class="calendar-nav-btn" id="calendarPrevMonth">←</button>
+                            <h2 class="calendar-month-year" id="calendarMonthYear"></h2>
+                            <button class="calendar-nav-btn" id="calendarNextMonth">→</button>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Calendar will be rendered here by JavaScript -->
+                        </div>
+                        <div class="calendar-legend">
+                            <div class="calendar-legend-item">
+                                <span class="calendar-legend-dot active"></span>
+                                <span class="calendar-legend-text">Active session</span>
+                            </div>
+                            <div class="calendar-legend-item">
+                                <span class="calendar-legend-dot completed">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="calendar-legend-text">Completed</span>
+                            </div>
+                            <div class="calendar-legend-item">
+                                <span class="calendar-legend-dot planned-outline"></span>
+                                <span class="calendar-legend-text">Planned</span>
+                            </div>
+                            <div class="calendar-legend-item">
+                                <span class="calendar-legend-dot locked">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 10V8C6 5.79086 7.79086 4 10 4H14C16.2091 4 18 5.79086 18 8V10M6 10H4C2.89543 10 2 10.8954 2 12V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V12C22 10.8954 21.1046 10 20 10H18M6 10H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="calendar-legend-text">Locked</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="unlock-config.js"></script>
+    <script src="annual-plan-fundamentals.js"></script>
+    <script src="calendar-sessions-mock.js"></script>
+    <!-- Session Edit Modal -->
+    <div class="session-edit-modal-overlay" id="sessionEditModal" style="display: none;">
+        <div class="session-edit-modal">
+            <div class="session-edit-modal-header">
+                <h2 class="session-edit-modal-title" id="sessionEditTitle">Session Title</h2>
+                <button class="session-edit-modal-close" id="sessionEditModalClose">&times;</button>
+            </div>
+            <div class="session-edit-modal-body">
+                <div class="session-edit-form-group">
+                    <label for="sessionEditDate" class="session-edit-form-label">Date</label>
+                    <input type="date" id="sessionEditDate" class="session-edit-form-input">
+                </div>
+                <div class="session-edit-form-group">
+                    <label for="sessionEditTime" class="session-edit-form-label">Time</label>
+                    <input type="time" id="sessionEditTime" class="session-edit-form-input">
+                </div>
+            </div>
+            <div class="session-edit-modal-footer">
+                <button class="session-edit-btn secondary" id="sessionEditCancelBtn">Cancel</button>
+                <button class="session-edit-btn" id="sessionEditChangeDateBtn">Change Date</button>
+                <button class="session-edit-btn" id="sessionEditChangeTimeBtn">Change Time</button>
+                <button class="session-edit-btn warning" id="sessionEditMarkCompletedBtn">Mark Completed</button>
+                <button class="session-edit-btn danger" id="sessionEditCancelSessionBtn">Cancel Session</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="fundamentals-annual.js"></script>
+</body>
+</html>

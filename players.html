@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - WPDP Coaching - Tennis Canada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <nav class="top-nav">
+                    <a href="index.html" class="nav-link back-to-home">← Back to Home</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Dashboard Header Bar -->
+            <div class="dashboard-header">
+                <div class="dashboard-header-content">
+                    <a href="index.html" class="back-link">
+                        <span class="back-arrow">←</span>
+                        <span class="dashboard-header-text">WPDP Coaching Video Pathway</span>
+                    </a>
+                    <span class="dashboard-header-arrow">→</span>
+                </div>
+            </div>
+
+            <div class="players-management-container">
+                <!-- Header Section -->
+                <section class="players-management-header">
+                    <div class="players-management-header-left">
+                        <h1 class="players-management-title">PLAYERS</h1>
+                        <p class="players-management-subtitle">Manage players and track their development progress</p>
+                    </div>
+                    <div class="players-management-header-right">
+                        <button class="players-add-btn" id="addPlayerBtn">+ Add Player</button>
+                    </div>
+                </section>
+
+                <!-- Players by Stage Section -->
+                <section class="players-by-stage-section" id="playersByStageSection">
+                    <!-- Players grouped by stage will be rendered here -->
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Player Overview Drawer -->
+    <div class="player-overview-drawer-overlay" id="playerOverviewDrawerOverlay" style="display: none;">
+        <div class="player-overview-drawer" id="playerOverviewDrawer">
+            <div class="player-overview-drawer-header">
+                <h2 class="player-overview-drawer-title" id="playerOverviewDrawerTitle">Player Name</h2>
+                <button class="player-overview-drawer-close" id="playerOverviewDrawerClose">&times;</button>
+            </div>
+            <div class="player-overview-drawer-content" id="playerOverviewDrawerContent">
+                <!-- Player overview content will be rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Player Modal -->
+    <div class="add-player-modal-overlay" id="addPlayerModalOverlay" style="display: none;">
+        <div class="add-player-modal" id="addPlayerModal">
+            <div class="add-player-modal-header">
+                <h2 class="add-player-modal-title">Add New Player</h2>
+                <button class="add-player-modal-close" id="addPlayerModalClose">&times;</button>
+            </div>
+            <div class="add-player-modal-content">
+                <form id="addPlayerForm">
+                    <div class="add-player-form-group">
+                        <label for="playerNameInput" class="add-player-form-label">Name</label>
+                        <input type="text" id="playerNameInput" class="add-player-form-input" required>
+                    </div>
+                    <div class="add-player-form-group">
+                        <label for="playerStageSelect" class="add-player-form-label">Stage</label>
+                        <select id="playerStageSelect" class="add-player-form-select" required>
+                            <option value="fundamentals">Fundamentals</option>
+                        </select>
+                    </div>
+                    <div class="add-player-form-group">
+                        <label for="playerWeekSelect" class="add-player-form-label">Current Week</label>
+                        <select id="playerWeekSelect" class="add-player-form-select" required>
+                            <!-- Week options will be populated by JavaScript -->
+                        </select>
+                    </div>
+                    <div class="add-player-modal-footer">
+                        <button type="button" class="add-player-modal-btn secondary" id="addPlayerCancelBtn">Cancel</button>
+                        <button type="submit" class="add-player-modal-btn" id="addPlayerSubmitBtn">Add Player</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="players-overview-mock.js"></script>
+    <script src="players-management.js"></script>
+</body>
+</html>
